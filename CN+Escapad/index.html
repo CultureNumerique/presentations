@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>reveal.js - The HTML Presentation Framework</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css" id="theme">
+		<link rel="stylesheet" href="css/custom.css">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<script type="text/javascript" src="plugin/markdown/marked.js"></script>
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section data-markdown>
+
+					<script type="text/template">
+						![logo](media/logo_cult-num.png "logo CN")
+						
+						
+						** Point d'avancement et perspectives **
+						
+						*
+						
+						*Réunion Comue Numérique - 13 mai 2016*
+				    </script>
+
+				</section>
+				
+				<section data-markdown>
+					<script type="text/template">
+						**Notre vision : produire un contenu de cours riche à partir d'un format texte**
+						
+						![formats](media/cn_formats.jpg "logo CN")
+						
+					</script>
+				</section>
+				
+				<section data-markdown>
+					<script type="text/template">
+						**Chaine éditoriale**
+						
+						![formats](media/cn_workflow.jpg "logo CN")
+						
+					</script>
+				</section>
+				
+				<section data-markdown>
+					<script type="text/template">
+						## Présentation d'Esc@Pad
+						
+						__E__diteur __S__imple de __C__ours __@__ (en ligne) __P__ar __A__ccès __D__istant
+						
+					</script>
+				</section>
+				
+				<section data-markdown>
+					<script type="text/template">
+						## Perspectives
+						
+						- Développer une interface intégrant édition, compilation, et depôt de fichier inspiré notamment de [Dillinger](http://dillinger.io/) ou [Overleaf](https://www.overleaf.com/) 
+						
+						- Développer les formats d'exports (OpenEDX, Moodle MBZ) et convertisseur IMS/Moodle vers OpenEDX
+						
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						Contacts :   
+						[culturenumerique.univ-lille3.fr](http://culturenumerique.univ-lille3.fr)
+					</script>
+				</section>
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
