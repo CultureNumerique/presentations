@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Culture Numérique - Université Lille3 - </title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/solarized.css" id="theme">
+		<link rel="stylesheet" href="css/custom.css">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<script type="text/javascript" src="plugin/markdown/marked.js"></script>
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section data-markdown>
+
+					<script type="text/template">
+						![logo](media/logo_cult-num.png "logo CN")
+
+						**Du texte aux outils pédagogiques :**
+						
+						la chaine éditoriale  
+						
+						des cours de **C**ulture **N**umérique  
+						
+						*Université Lille 3*
+				    </script>
+
+				</section>
+				<section data-markdown>
+					<script type="text/template">
+						###Etape 1:  
+						Edition du contenu
+						
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						Partage et gestion des versions sur 
+						<a href="http://github.com/CultureNumerique/cn_modules" target="_blank">un dépôt git</a>
+						![github_fichiers](media/01_vue_github_fichiers.png)
+
+
+				    </script>
+
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						Edition sur format ouverts et portables:
+						Contenu de cours au format MarkDown
+						![github_edition](media/02_vue_github_correction_edit_mode.png)
+					</script>
+				</section>
+				
+				<section data-markdown>
+					<script type="text/template">
+						Prévisualisation instantanée du rendu:
+						![github_edition](media/03_vue_github_correction_preview.png)
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						Evaluations et devoirs saisis en .GIFT (format texte ouvert)
+
+						```
+						::1.1.1 Quizz (Q2/3)::
+						[html] 
+						Que signifie "numérisation" ? 
+						{
+						=L’opération qui consiste à représenter sous forme de nombres une information quelle qu’elle soit.
+							#Oui ! Votre réponse est correcte.
+						~L’opération qui consiste à citer tous les nombres (1, 2, 3, 4, ….).
+							# Non, citer tous les nombres c’est compter... Votre réponse est incorrecte.
+						}
+						```
+				    </script>
+				</section>
+
+					<!-- <section data-markdown>
+						<script type="text/template">
+							Export automatisés via scripts depuis le document de travail:
+							- toHTML.py
+							- toMoodle.py
+							- toEdx.py (soon...)
+						</script>
+					</section> -->
+
+				<section data-markdown>
+					<script type="text/template">
+						###Etape2 :
+						Export Web
+					</script>
+				</section>
+				<section data-markdown>
+					<script type="text/template">
+						Export automatisé en version "site vitrine"  
+						![github_edition](media/vue_web_cours.png)
+					</script>
+				</section>
+				<section data-markdown>
+					<script type="text/template">
+						Les exercices d'auto-évaluation sont mis en forme
+						![github_edition](media/vue_web_quizz.png)
+					</script>
+				</section>
+				<section data-markdown>
+					<script type="text/template">
+						... ainsi que les recherches guidées
+						![github_edition](media/vue_web_activite_avancee.png)
+					</script>
+				</section>
+				
+				<section data-markdown>
+					<script type="text/template">
+						Try it !
+						<a href="http://culturenumerique.github.io/cn_modules/" data-preview-link>Culture Numérique- Site Vitrine</a>
+				    </script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						###Etape 3
+						Export Moodle
+					</script>
+				</section>
+				<section data-markdown>
+					<script type="text/template">
+						Les scripts génèrent automatiquement une 
+						archive IMSCC importable dans Moodle
+						![github_edition](media/2.cours_importé.png)
+					</script>
+				</section>
+				
+				<section data-markdown>
+					<script type="text/template">
+						Les vidéos d'animation sont directement consultable dans le cours
+						![github_edition](media/3.vue_cours_avec_video.png)
+					</script>
+				</section>
+				<section data-markdown>
+					<script type="text/template">
+						Une fois le cours importé, on ajoute la banque de questions elle aussi automatiquement générée depuis le code source Gift
+						![github_edition](media/import_banque_question.png)
+					</script>
+				</section>
+				<section data-markdown>
+					<script type="text/template">
+						On peut ensuite ajouter les questions au tests (vides) déjà créés
+						![github_edition](media/ajout_question_depuis_la_banque.png)
+					</script>
+				</section>
+				<section data-markdown>
+					<script type="text/template">
+						Le cours est alors prêt à être dispensé
+						![github_edition](media/visu_quizz_tentative.png)
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						Contacts :   
+						[culturenumerique.univ-lille3.fr](http://culturenumerique.univ-lille3.fr)
+					</script>
+				</section>
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
