@@ -1,0 +1,19 @@
+
+$CATEGORY: $course$/Quiz Bank '1-4 Auto-évaluation'
+
+
+::Format texte::[html]<p>Parmis les formats de données suivants, lequel est un format texte, i.e lisible par un simple editeur de texte</p>{
+~%50%JSON
+~%50%CSV
+~%-100%XLS
+}
+
+
+$CATEGORY: $course$/Quiz Bank '1-7 Activite'
+
+
+::Questions::[html] <p>Après avoir effectué le TP précédent, répondez aux questions suivantes:<br>
+- Renseignez le lien vers la cartographie que vous avez réalisée, puis répondez aux questions suivantes:<br>
+- Trouver des représentations qui permettent de visualiser instantanément les gares ayant le meilleure indice de satisfaction. inspecter les résultat, et compter combien de résultats sont affichés par rapport aux nombres de gares pour lesquelles vous avez un chiffre de satisfaction. <br>
+- Que constatez-vous ? Pourquoi ? (aidez-vous de requêtes SQL pour compter les résultats)</p>{}
+

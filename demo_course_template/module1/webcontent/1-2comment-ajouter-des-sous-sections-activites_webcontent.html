@@ -1,0 +1,27 @@
+<p>Les activités peuvent être de 2 types:</p>
+<ul>
+<li>auto-évaluation: <code>activité</code></li>
+<li>Exercices d'approfondissement: <code>activité-avancée</code>
+Pour le découpage des activités, nous n'utilisons plus les <code>##</code> de la syntaxe markdown, mais les "fenced code blocks" en spécifiant le type d'activité  juste à côté des "backticks" <code>```activité</code></li>
+</ul>
+<h3>Syntaxe GIFT</h3>
+<p>Ces activités sont rédigées en GIFT; chaque question est séparée par une ligne vide. La syntaxe Gift a été proposé par l'équipde Moodle pour permettre de gagner du temps dans la rédaction de quizz et de tests. Cette syntaxe est disponible sur <a href="https://docs.moodle.org/28/en/GIFT_format">cette page</a>. Il s'agit d'un format "texte" qui peut s'éditer dans n'importe quel "éditeur de texte" (et non dans un "traitement de texte").</p>
+<p>Exemple:</p>
+<pre><code>    ```activité-avancée
+
+    ::La représentation numérique d'un livre peut inclure des données qui ne se limitent pas au texte. Donnez quelques exemples:: {
+    #### Le genre, la date de création, ...
+    }
+
+    ::Fonctionnalités d'un éditeur de textes::
+    [html]&lt;p&gt;Parmi les  fonctionnalités suivantes, lesquelles sont possibles ?
+    &lt;/p&gt;
+    {
+    ~%25%copier/couper/coller#tous les éditeurs le permettent
+    ~%25%rechercher et remplacer#très souvent disponible
+    ~%25%avancer de mots en mots#souvent par la conjonction CRTL-flèches
+    ~%25%corriger l'orthographe#certains le font
+    ~%-100%mettre en gras#l'éditeur ne permet pas d'enregistrer des mises en forme (il est possible toutefois d'écrire des commandes de mise en forme : un mot n'est pas en gras mais un texte dans un langage peut exprimer l'ordre de mettre en gras)
+    }
+    ```
+</code></pre>

@@ -1,0 +1,52 @@
+
+$CATEGORY: $course$/Quiz Bank '1-4 Auto-évaluation'
+
+
+::Représenter et manipuler::
+[html]
+<p><strong>Représenter et manipuler</strong><br>
+Les traitements possibles dépendent fortement des choix de représentation</p>{T}
+
+
+::Quelles données ?::
+[html]
+<p><strong>Quelles données ?</strong><br>
+La représentation numérique d'un livre peut inclure des données qui ne se limitent pas au contenu textuel. Donnez quelques exemples.</p>{#### <p>Le genre, la date de création, l'éditeur, ...</p>}
+
+
+::De la variété ?::
+[html]
+<p><strong>De la variété ?</strong><br>
+Il n'existe qu'une seule façon de représenter numériquement un livre.</p>{F #Représenter une information est le résultat de nombreux choix}
+
+
+::Comment choisir ?::
+[html]
+<p><strong>Comment choisir ?</strong><br>
+Donnez des exemples de critères qui peuvent gouverner le choix d'une représentation numérique.</p>{#### <p>la concision, la pertinence (permettre des traitements voulus), l'efficacité (les traitements sont réalisés rapidement, la confidentialité (l'accès aux données  peut être contrôlé),...</p>}
+
+
+::Qui choisit ? ::
+[html]
+<p><strong>Qui choisit ?</strong><br>
+Les choix de représentations sont faits par</p>{
+~Les informaticiens #non pas seuls car intervient aussi l'utilisation métier des objets représentés
+~Les experts métier #non pas seuls car il faut des spécialistes des données numériques et des algorithmes
+=Les deux #oui et souvent aussi des chercheurs, des entreprises, ...
+}
+
+
+$CATEGORY: $course$/Quiz Bank '1-5 Activite'
+
+
+::Une tâche complexe::
+[html]
+<p><strong>Une tâche complexe</strong><br>
+Représenter et normaliser est une tâche complexe : l'exemple de HTML. En vous rendant sur les pages wikipedia de <a href="https://fr.wikipedia.org/wiki/Hypertext_Markup_Language" target="_blank">HTML</a> et du <a href="https://fr.wikipedia.org/wiki/World_Wide_Web_Consortium" target="_blank">W3C</a>. Répondez aux questions suivantes :<br>
+- Quelle est l'origine de <code>HTML</code> ?<br>
+- Qui développe et publie les spécifications <code>HTML</code> depuis 1995 ?<br>
+- Quelle est la version la plus récente de <code>HTML</code> et son année de parution ?<br>
+- Qui participe au développement du standard <code>HTML</code> au <code>W3C</code> ?<br>
+- Quelles sont les étapes pour arriver à être une recommandation ?<br>
+- Qui est responsable du standard <code>css</code> pour les feuilles de style ?</p>{#### <p>origine au CERN ; Le W3C développe le HTML depuis 1995 ; HTML5 en 2014 ; industriels, éditeurs logiciels, chercheurs, entreprises du Web, ... ; brouillon, appel, candidat, proposition et recommandation ; le W3C.</p>}
+

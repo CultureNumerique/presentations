@@ -1,0 +1,68 @@
+{
+    "author": "Culture Num\u00e9rique",
+    "css": "http://culturenumerique.univ-lille3.fr/css/base.css",
+    "ims_archive_path": "",
+    "language": "fr",
+    "menutitle": "Module 1",
+    "module": "module1",
+    "sections": [
+        {
+            "lastLine": "",
+            "module": "module1",
+            "num": "1",
+            "subsections": [
+                {
+                    "filename": "1-1syntaxe-pour-editer-un-contenu-de-cours-esc-pad_webcontent.html",
+                    "folder": "webcontent",
+                    "lastLine": "## Comment ajouter des sous-sections `Activit\u00e9s`\n",
+                    "num": "1-1",
+                    "src": "\n[video]( https://player.vimeo.com/video/93350435 ){: .lien_video } \n\nNous d\u00e9taillons ici la chaine \u00e9ditoriale adopt\u00e9e pour la production des modules mis \u00e0 dispositions sur ce d\u00e9p\u00f4t.  \nNous utilisons un fichier dit \"maitre\" comme matrice de base pour g\u00e9n\u00e9rer le cours. La syntaxe employ\u00e9e est bas\u00e9e sur le format **MarkDown**. Vous pourrez observer l'usage de ce format dans la video de cette section de cours. \n\nPour permettre de prendre en compte les sp\u00e9cificit\u00e9s d'un contenu de cours destin\u00e9 \u00e0 \u00eatre publi\u00e9 en ligne ou au sein de plateforme de Mooc ou de eLearning, nous avons \u00e9tendu la syntaxe Markdown. Ces ajouts consistent en des conventions d\u00e9crites ci-dessous et reprennent \u00e9galement les extensions propos\u00e9es par la [librairie Python de MarkDown](https://pythonhosted.org/Markdown/extensions). \n\n### Structure globale d'un cours Culture Num\u00e9rique\nUn cours se d\u00e9compose en sections et sous-sections. Le niveau sous-sections constitue le niveau \"pivot\" de la structure d'un cours Culture NUm\u00e9rique. Chaque sous-section peut \u00eatre du type et de la forme suivante:  \n\n1. \u00e9l\u00e9ment de cours simple (texte + images)  \n2. \u00e9l\u00e9ment de cours incluant une ou plusieurs animations (vid\u00e9o) accompagn\u00e9es \u00e0 chaque fois par la version texte lisible en mode _zen_ \n1. auto-\u00e9valuation sous forme de quiz \n2. exercice d'approfondissement incluant un \u00e9nonc\u00e9 (texte riche) et un espace pour fournir une r\u00e9ponse sous forme de texte libre\n\n### Sous-section de cours simple\n\nR\u00e9dig\u00e9e en MarkDown, c'est un type de sous-section simple consistant en du texte mis en forme et enrichi d'images. \nPar rapport au MArkdown simple, nous utilisons les fonctions suppl\u00e9mentaires d\u00e9crites ci-apr\u00e8s.\n\n#### ajouter des classes CSS \n\nAvec des [Attribute list](https://pythonhosted.org/Markdown/extensions/attr_list.html): Pour permettre d'ajouter des classes CSS \u00e0 une image ou \u00e0 un bloc de texte, pour permettre une mise en page enrichie.\nUn exemple pour ajouter un attribut en ligne \u00e0 un lien:  \n`[link](http://example.com){: class=\"foo bar\" .titre title=\"Some title!\" }`  \nqui produit le HTML suivant:  \n`<p><a href=\"http://example.com\" class=\"foo bar titre\" title=\"Some title!\">link</a></p>`  \n\nNotez que pour ajouter des classes on peut soit sp\u00e9cifier `.une_classe` ou `class='une_classe``\n\n#### Commentaires invisibles\nEn utilisant simplement les commentaires HTML:\n    \n        <!-- On pourrait aussi mentionner les lol cats dans cette section non ? -->\n\nLe commentaire suivant ne sera donc pas visible dans le rendu HTML final.\n<!-- Il faudrait vraiment enrichir cette documentation de quelques Gifs anim\u00e9s -->        \n\n### Sous-section de cours avec animations vid\u00e9o\nCes \u00e9l\u00e9ments de cours consistent en des sous-sections pouvant inclure 1 ou plusieurs vid\u00e9os d'animations. Ici il y a 2 \u00e9tapes:  \n- a) avant la r\u00e9alisation des vid\u00e9os, on ajoute des blocs 'Id\u00e9e animation' pour d\u00e9crire ce que pourrait contenir l'animation qui sera int\u00e9gr\u00e9e par la suite\n- b) une fois la vid\u00e9o r\u00e9alis\u00e9e, on int\u00e8gre le lien de la vid\u00e9o qui sera ensuite int\u00e9gr\u00e9e via une iframe dans la sous-section de cours\n\n####a) Notes pour id\u00e9es d'animation\nOn utilise ici le principe natif de block quote Markdown avec un `>` en d\u00e9but de paragraphe:\n```    \n> [Animation] Peut \u00eatre des lettres simples en suite de 0 et de 1, et des\ncompositions en mots/composition de suites de 0 et 1...  est-ce\nqu'on fait passer l'id\u00e9e de coder/d\u00e9coder et sa contraction en codec?  \n```\nQui produira ce r\u00e9sultat:\n\n> [Animation] Peut \u00eatre des lettres simples en suite de 0 et de 1, et des\ncompositions en mots/composition de suites de 0 et 1...  est-ce\nqu'on fait passer l'id\u00e9e de coder/d\u00e9coder et sa contraction en codec?  \n\n**NB** Si le mot cl\u00e9 `[Animation]` n'est pas inclu, le bloc sera toujours interpr\u00e9t\u00e9 comme bloc id\u00e9e d'animation.\n\n####b) Lien vers une vid\u00e9o d'animation\nSur le m\u00eame principe que les *attribute lists* (cf ci-dessus), on sp\u00e9cifie qu'il s'agit d'un lien vers une vid\u00e9o en sp\u00e9cifiant la classe `lien_video`:  \n\n```\n    [Introduction au web](https://player.vimeo.com/video/138623497){: .lien_video } \n\nou  \n\n    [Introduction au web](https://player.vimeo.com/video/138623497){: class=\"lien_video\" } \n```\n\nCe lien doit \u00eatre plac\u00e9 \u00e0 l'int\u00e9rieur d'une sous-section. Une sous-section peut bien s\u00fbr comporter plusieurs vid\u00e9os. \n\nCes liens vid\u00e9os font l'objet d'un traitement sp\u00e9cifique selon le type d'export:\n* export Site Vitrine HTML: on g\u00e9n\u00e8re un code d'iframe qui permet de lire le/les vid\u00e9o/s sans quitter la page courante; le texte de la sous-section est quant \u00e0 lui offert en parall\u00e8le en mode \"zen\" activ\u00e9 au click sur la vignette \u00e0 c\u00f4t\u00e9 des vid\u00e9os (cf image ci-dessous).\n![video_site_vitrine](media/vue_web_cours.png)\n* pour l'export Moodle/IMSCC, le lien est simplement reformat\u00e9 pour respecter le format `http://vimeo.com/video_id` qui permet au plugin Vim\u00e9o de Moodle de transformer le lien vid\u00e9o en iframe automatiquement:\n![video_moodle](media/3.vue_cours_avec_video.png)\n\n\n\n",
+                    "title": "Syntaxe pour \u00e9diter un contenu de cours Esc@Pad",
+                    "videos": [
+                        {
+                            "video_link": "https://player.vimeo.com/video/93350435",
+                            "video_thumbnail": "https://i.vimeocdn.com/video/536038298_640.jpg",
+                            "video_title": "video"
+                        }
+                    ]
+                },
+                {
+                    "filename": "1-2comment-ajouter-des-sous-sections-activites_webcontent.html",
+                    "folder": "webcontent",
+                    "lastLine": "## Exemples d'activit\u00e9\n",
+                    "num": "1-2",
+                    "src": "\nLes activit\u00e9s peuvent \u00eatre de 2 types:\n\n- auto-\u00e9valuation: `activit\u00e9`\n- Exercices d'approfondissement: `activit\u00e9-avanc\u00e9e`\nPour le d\u00e9coupage des activit\u00e9s, nous n'utilisons plus les `##` de la syntaxe markdown, mais les \"fenced code blocks\" en sp\u00e9cifiant le type d'activit\u00e9  juste \u00e0 c\u00f4t\u00e9 des \"backticks\" ````activit\u00e9`\n\n### Syntaxe GIFT\n\nCes activit\u00e9s sont r\u00e9dig\u00e9es en GIFT; chaque question est s\u00e9par\u00e9e par une ligne vide. La syntaxe Gift a \u00e9t\u00e9 propos\u00e9 par l'\u00e9quipde Moodle pour permettre de gagner du temps dans la r\u00e9daction de quizz et de tests. Cette syntaxe est disponible sur [cette page](https://docs.moodle.org/28/en/GIFT_format). Il s'agit d'un format \"texte\" qui peut s'\u00e9diter dans n'importe quel \"\u00e9diteur de texte\" (et non dans un \"traitement de texte\").\n \nExemple:\n\n        ```activit\u00e9-avanc\u00e9e\n        \n        ::La repr\u00e9sentation num\u00e9rique d'un livre peut inclure des donn\u00e9es qui ne se limitent pas au texte. Donnez quelques exemples:: {\n        #### Le genre, la date de cr\u00e9ation, ...\n        }\n        \n        ::Fonctionnalit\u00e9s d'un \u00e9diteur de textes::\n        [html]<p>Parmi les  fonctionnalit\u00e9s suivantes, lesquelles sont possibles ?\n        </p>\n        {\n        ~%25%copier/couper/coller#tous les \u00e9diteurs le permettent\n        ~%25%rechercher et remplacer#tr\u00e8s souvent disponible\n        ~%25%avancer de mots en mots#souvent par la conjonction CRTL-fl\u00e8ches\n        ~%25%corriger l'orthographe#certains le font\n        ~%-100%mettre en gras#l'\u00e9diteur ne permet pas d'enregistrer des mises en forme (il est possible toutefois d'\u00e9crire des commandes de mise en forme : un mot n'est pas en gras mais un texte dans un langage peut exprimer l'ordre de mettre en gras)\n        }\n        ```\n\n\n \n",
+                    "title": "Comment ajouter des sous-sections `Activit\u00e9s`",
+                    "videos": []
+                },
+                {
+                    "filename": "1-3exemples-d-activite_webcontent.html",
+                    "folder": "webcontent",
+                    "lastLine": "```comprehension\n",
+                    "num": "1-3",
+                    "src": "\nDans les sous-sections suivantes, retrouvez une s\u00e9rie d'exemple d'activit\u00e9s des 2 types (simple et avanc\u00e9es.). N'h\u00e9sitez-pas \u00e0 vous inspirer de ces exemples et \u00e0 les prendre comme point de d\u00e9part pour cr\u00e9er vos propres contenus.\n\n",
+                    "title": "Exemples d'activit\u00e9",
+                    "videos": []
+                },
+                {
+                    "filename": "1-4auto-evaluation_Comprehension.html",
+                    "folder": "Comprehension",
+                    "lastLine": "```\n",
+                    "num": "1-4",
+                    "src": "::Repr\u00e9senter et manipuler::\n[markdown]\n**Repr\u00e9senter et manipuler**\nLes traitements possibles d\u00e9pendent fortement des choix de repr\u00e9sentation\n{T}\n\n::Quelles donn\u00e9es ?::\n[markdown]\n**Quelles donn\u00e9es ?**\nLa repr\u00e9sentation num\u00e9rique d'un livre peut inclure des donn\u00e9es qui ne se limitent pas au contenu textuel. Donnez quelques exemples.\n{#### Le genre, la date de cr\u00e9ation, l'\u00e9diteur, ...}\n\n::De la vari\u00e9t\u00e9 ?::\n[markdown]\n**De la vari\u00e9t\u00e9 ?**\nIl n'existe qu'une seule fa\u00e7on de repr\u00e9senter num\u00e9riquement un livre.\n{F #Repr\u00e9senter une information est le r\u00e9sultat de nombreux choix}\n\n::Comment choisir ?::\n[markdown]\n**Comment choisir ?**\nDonnez des exemples de crit\u00e8res qui peuvent gouverner le choix d'une repr\u00e9sentation num\u00e9rique.\n{#### la concision, la pertinence (permettre des traitements voulus), l'efficacit\u00e9 (les traitements sont r\u00e9alis\u00e9s rapidement, la confidentialit\u00e9 (l'acc\u00e8s aux donn\u00e9es  peut \u00eatre contr\u00f4l\u00e9),...}\n\n::Qui choisit ? ::\n[markdown]\n**Qui choisit ?**\nLes choix de repr\u00e9sentations sont faits par\n{\n~Les informaticiens #non pas seuls car intervient aussi l'utilisation m\u00e9tier des objets repr\u00e9sent\u00e9s\n~Les experts m\u00e9tier #non pas seuls car il faut des sp\u00e9cialistes des donn\u00e9es num\u00e9riques et des algorithmes\n=Les deux #oui et souvent aussi des chercheurs, des entreprises, ...\n}\n",
+                    "title": "Auto-\u00e9valuation"
+                },
+                {
+                    "filename": "1-5activite_Activite.html",
+                    "folder": "Activite",
+                    "lastLine": "```\n",
+                    "num": "1-5",
+                    "src": "::Une t\u00e2che complexe::\n[markdown]\n**Une t\u00e2che complexe**\nRepr\u00e9senter et normaliser est une t\u00e2che complexe : l'exemple de HTML. En vous rendant sur les pages wikipedia de [HTML](https://fr.wikipedia.org/wiki/Hypertext_Markup_Language) et du [W3C](https://fr.wikipedia.org/wiki/World_Wide_Web_Consortium). R\u00e9pondez aux questions suivantes :\n- Quelle est l'origine de `HTML` ?\n- Qui d\u00e9veloppe et publie les sp\u00e9cifications `HTML` depuis 1995 ?\n- Quelle est la version la plus r\u00e9cente de `HTML` et son ann\u00e9e de parution ?\n- Qui participe au d\u00e9veloppement du standard `HTML` au `W3C` ?\n- Quelles sont les \u00e9tapes pour arriver \u00e0 \u00eatre une recommandation ?\n- Qui est responsable du standard `css` pour les feuilles de style ?\n{#### origine au CERN ; Le W3C d\u00e9veloppe le HTML depuis 1995 ; HTML5 en 2014 ; industriels, \u00e9diteurs logiciels, chercheurs, entreprises du Web, ... ; brouillon, appel, candidat, proposition et recommandation ; le W3C.}\n",
+                    "title": "Activite"
+                }
+            ],
+            "title": "Comment utiliser Esc@Pad pour produire un support de cours multi-plateformes"
+        }
+    ],
+    "title": "Module de cours test 1"
+}

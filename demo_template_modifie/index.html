@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0">
+    <link rel="icon" href="static/img/favicon.png" />
+    <link rel="stylesheet" href="static/css/style.css" media="screen" />
+    <script type="text/javascript" src="static/js/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="static/js/fancybox/jquery.fancybox.pack.js"></script>
+    <script type="text/javascript" src="static/js/culturenum.js"></script>
+    <link rel="stylesheet" href="static/css/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+    <title>Exemple de cours Esc@pad</title>
+</head>
+
+<body>
+    <!--  HEADER -->
+    <div id="container">
+        <header>
+            <h1>
+                <a title="Culture Numérique" class="maintitle" href="">
+                    <img src="logo.png" style="max-height:70px;">
+                </a>
+            </h1>
+            <h2>Exemple de cours Esc@pad</h2>
+        </header>
+        <!-- Module Menu FIXME : fetch this from toHTMLgobal.config.json -->
+        <nav class="module_menu">
+            <ul id="static-nav">
+                <li><a class="active" href="index.html">Accueil</a></li>
+                
+                <li><a class="" href="module1.html">Base de données</a></li>
+                
+            </ul>
+        </nav>
+
+        <div class="module_content accueil">
+            
+            <h2>Créer son programme de cours avec Esc@Pad</h2>
+<ol>
+<li>Créez-vous un compte sur un gestionnaire de version de fichier de type 'git' (GitHub, Gitlab, Bitbucket, etc). </li>
+<li>Dupliquez ce dépôt de fichier et importez le. Si vous utilisez GitHub, faites simplement "Fork"</li>
+<li>La structure de ce template est simple:</li>
+<li>un programme de cours est contenu dans un dépôt de type Git (le dépôt que vous avec dupliqué)</li>
+<li>un programme de cours se décompose en "modules" chaqun contenu dans un dossier nommé <code>moduleX</code> avec <code>X</code> le numéro de chaque module qui déterminera l'ordre dans lequel les modules sont rangés.</li>
+<li>dans chaque dossier de module, il y a un fichier <code>lenomdemoncours.md</code> et un dossier <code>media</code> contenant les images insérées dans votre chaque module de cours. La syntaxe utilisé pour éditer un module de cours est expliquée ci-après.</li>
+<li>dans le fichier home.md (ce présent fichier), remplacer le texte par le contenu de votre page d'accueil.</li>
+<li>pour personnaliser le logo remplacez le fichier <code>logo.png</code> par le fichier de votre choix que vous renommerez <code>logo.png|jpg|gif</code> en fonction du type d'image utilisée.</li>
+<li>enfin, pour personnaliser le titre de votre programme de cours, éditer le fichier <code>title.md</code> et, sans le renommer, insérez votre titre en première ligne.</li>
+<li>pour générer votre site, rendez-vous sur le site http://escapad.univ-lille3.fr et cliquez sur "Ajouter un dépôt".</li>
+<li>renseignez les champs "login", "nom du dépot", et "url du dépôt". Validez.</li>
+<li>Vous pouvez à présent générer un site vitrine de votre cours en cliquant sur "Générer site". Les archives d'export (IMS, etc) sont disponibles à l'intérieur de ce site.</li>
+</ol>
+        
+        </div>
+        <!--  EndOf <div class="module_content">-->
+        <footer>
+            <a href="https://www.univ-lille3.fr/">
+                <img src="static/svg/logo_lille3.svg" title="" alt="Lille 3" />
+            </a>
+            <p><a href="http://culturenumerique.univ-lille3.fr/" title="Culture Numérique">Exemple de cours Esc@pad</a> - 2015</p>
+        </footer>
+    </div>
+    <!-- End of container-->
+</body>
+
+</html>

@@ -1,0 +1,5 @@
+
+1-1 Syntaxe pour éditer un contenu de cours Esc@Pad
+<iframe src=https://player.vimeo.com/video/93350435 width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+

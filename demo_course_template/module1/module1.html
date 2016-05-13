@@ -1,0 +1,232 @@
+<!--  NAVIGATION MENU -->
+<nav class="menu accordion">
+  <h3>Module de cours test 1</h3>
+  <ul>
+    <li>
+      <a href="#" data_sec_id="sec_0" class="section active">1 Comment utiliser Esc@Pad pour produire un support de cours multi-plateformes</a>
+      <p style=" display:block">
+        <a href="#" data_sec_id="subsec_0_0" class="subsection webcontent active">1.1 Syntaxe pour éditer un contenu de cours Esc@Pad</a>
+        <a href="#" data_sec_id="subsec_0_1" class="subsection webcontent">1.2 Comment ajouter des sous-sections `Activités`</a>
+        <a href="#" data_sec_id="subsec_0_2" class="subsection webcontent">1.3 Exemples d'activité</a>
+        <a href="#" data_sec_id="subsec_0_3" class="subsection Comprehension">1.4 Auto-évaluation</a>
+        <a href="#" data_sec_id="subsec_0_4" class="subsection Activite">1.5 Activite</a>
+      </p>
+    </li>
+    <li style="border-top: 2px solid lightgray;">
+      <a href="#" data_sec_id="sec_A" class="section">Annexe: Réutiliser ce module</a>
+    </li>
+  </ul>
+</nav>
+<!--  MAIN CONTENT -->
+<main class="content">
+  <section style="display:true" id="subsec_0_0">
+    <p class="fil_ariane">Comment utiliser Esc@Pad pour produire un support de cours multi-plateformes | Syntaxe pour éditer un contenu de cours Esc@Pad</p>
+    <div href="#1-1_0" class="inline fancybox">Version Texte du cours<div class="mini-text"><div><p><a class="lien_video" href="http://vimeo.com/93350435">video (vers la video)</a></p><p>Nous détaillons ici la chaine éditoriale adoptée pour la production des modules mis à dispositions sur ce dépôt.<br>
+Nous utilisons un fichier dit "maitre" comme matrice de base pour générer le cours. La syntaxe employée est basée sur le format <strong>MarkDown</strong>. Vous pourrez observer l'usage de ce format dans la video de cette section de cours. </p><p>Pour permettre de prendre en compte les spécificités d'un contenu de cours destiné à être publié en ligne ou au sein de plateforme de Mooc ou de eLearning, nous avons étendu la syntaxe Markdown. Ces ajouts consistent en des conventions décrites ci-dessous et reprennent également les extensions proposées par la <a href="https://pythonhosted.org/Markdown/extensions">librairie Python de MarkDown</a>. </p><h3>Structure globale d'un cours Culture Numérique</h3><p>Un cours se décompose en sections et sous-sections. Le niveau sous-sections constitue le niveau "pivot" de la structure d'un cours Culture NUmérique. Chaque sous-section peut être du type et de la forme suivante:  </p><ol><li>élément de cours simple (texte + images)  </li><li>élément de cours incluant une ou plusieurs animations (vidéo) accompagnées à chaque fois par la version texte lisible en mode <em>zen</em></li><li>auto-évaluation sous forme de quiz </li><li>exercice d'approfondissement incluant un énoncé (texte riche) et un espace pour fournir une réponse sous forme de texte libre</li></ol><h3>Sous-section de cours simple</h3><p>Rédigée en MarkDown, c'est un type de sous-section simple consistant en du texte mis en forme et enrichi d'images. 
+Par rapport au MArkdown simple, nous utilisons les fonctions supplémentaires décrites ci-après.</p><h4>ajouter des classes CSS</h4><p>Avec des <a href="https://pythonhosted.org/Markdown/extensions/attr_list.html">Attribute list</a>: Pour permettre d'ajouter des classes CSS à une image ou à un bloc de texte, pour permettre une mise en page enrichie.
+Un exemple pour ajouter un attribut en ligne à un lien:<br><code>[link](http://example.com){: class="foo bar" .titre title="Some title!" }</code><br>
+qui produit le HTML suivant:<br><code>&lt;p&gt;&lt;a href="http://example.com" class="foo bar titre" title="Some title!"&gt;link&lt;/a&gt;&lt;/p&gt;</code></p><p>Notez que pour ajouter des classes on peut soit spécifier <code>.une_classe</code> ou `class='une_classe``</p><h4>Commentaires invisibles</h4><p>En utilisant simplement les commentaires HTML:</p><pre><code>    &lt;!-- On pourrait aussi mentionner les lol cats dans cette section non ? --&gt;
+</code></pre><p>Le commentaire suivant ne sera donc pas visible dans le rendu HTML final.
+<!-- Il faudrait vraiment enrichir cette documentation de quelques Gifs animés --></p><h3>Sous-section de cours avec animations vidéo</h3><p>Ces éléments de cours consistent en des sous-sections pouvant inclure 1 ou plusieurs vidéos d'animations. Ici il y a 2 étapes:<br>
+- a) avant la réalisation des vidéos, on ajoute des blocs 'Idée animation' pour décrire ce que pourrait contenir l'animation qui sera intégrée par la suite
+- b) une fois la vidéo réalisée, on intègre le lien de la vidéo qui sera ensuite intégrée via une iframe dans la sous-section de cours</p><h4>a) Notes pour idées d'animation</h4><p>On utilise ici le principe natif de block quote Markdown avec un <code>&gt;</code> en début de paragraphe:</p><pre><code>&gt; [Animation] Peut être des lettres simples en suite de 0 et de 1, et des
+compositions en mots/composition de suites de 0 et 1...  est-ce
+qu'on fait passer l'idée de coder/décoder et sa contraction en codec?  
+</code></pre><p>Qui produira ce résultat:</p><blockquote><p>[Animation] Peut être des lettres simples en suite de 0 et de 1, et des
+compositions en mots/composition de suites de 0 et 1...  est-ce
+qu'on fait passer l'idée de coder/décoder et sa contraction en codec?  </p></blockquote><p><strong>NB</strong> Si le mot clé <code>[Animation]</code> n'est pas inclu, le bloc sera toujours interprété comme bloc idée d'animation.</p><h4>b) Lien vers une vidéo d'animation</h4><p>Sur le même principe que les <em>attribute lists</em> (cf ci-dessus), on spécifie qu'il s'agit d'un lien vers une vidéo en spécifiant la classe <code>lien_video</code>:  </p><pre><code>    [Introduction au web](https://player.vimeo.com/video/138623497){: .lien_video } 
+
+ou  
+
+    [Introduction au web](https://player.vimeo.com/video/138623497){: class="lien_video" } 
+</code></pre><p>Ce lien doit être placé à l'intérieur d'une sous-section. Une sous-section peut bien sûr comporter plusieurs vidéos. </p><p>Ces liens vidéos font l'objet d'un traitement spécifique selon le type d'export:
+<em> export Site Vitrine HTML: on génère un code d'iframe qui permet de lire le/les vidéo/s sans quitter la page courante; le texte de la sous-section est quant à lui offert en parallèle en mode "zen" activé au click sur la vignette à côté des vidéos (cf image ci-dessous).
+<img alt="video_site_vitrine" src="module1/media/vue_web_cours.png"></em> pour l'export Moodle/IMSCC, le lien est simplement reformaté pour respecter le format <code>http://vimeo.com/video_id</code> qui permet au plugin Viméo de Moodle de transformer le lien vidéo en iframe automatiquement:
+<img alt="video_moodle" src="module1/media/3.vue_cours_avec_video.png"></p></div></div></div>
+    <div style="display:none">
+      <div id="1-1_0" class="fancy-text">
+        <div>
+          <p>
+            <a class="lien_video" href="http://vimeo.com/93350435">video (vers la video)</a>
+          </p>
+          <p>Nous détaillons ici la chaine éditoriale adoptée pour la production des modules mis à dispositions sur ce dépôt.<br>
+Nous utilisons un fichier dit "maitre" comme matrice de base pour générer le cours. La syntaxe employée est basée sur le format <strong>MarkDown</strong>. Vous pourrez observer l'usage de ce format dans la video de cette section de cours. </p>
+          <p>Pour permettre de prendre en compte les spécificités d'un contenu de cours destiné à être publié en ligne ou au sein de plateforme de Mooc ou de eLearning, nous avons étendu la syntaxe Markdown. Ces ajouts consistent en des conventions décrites ci-dessous et reprennent également les extensions proposées par la <a href="https://pythonhosted.org/Markdown/extensions">librairie Python de MarkDown</a>. </p>
+          <h3>Structure globale d'un cours Culture Numérique</h3>
+          <p>Un cours se décompose en sections et sous-sections. Le niveau sous-sections constitue le niveau "pivot" de la structure d'un cours Culture NUmérique. Chaque sous-section peut être du type et de la forme suivante:  </p>
+          <ol>
+            <li>élément de cours simple (texte + images)  </li>
+            <li>élément de cours incluant une ou plusieurs animations (vidéo) accompagnées à chaque fois par la version texte lisible en mode <em>zen</em></li>
+            <li>auto-évaluation sous forme de quiz </li>
+            <li>exercice d'approfondissement incluant un énoncé (texte riche) et un espace pour fournir une réponse sous forme de texte libre</li>
+          </ol>
+          <h3>Sous-section de cours simple</h3>
+          <p>Rédigée en MarkDown, c'est un type de sous-section simple consistant en du texte mis en forme et enrichi d'images. 
+Par rapport au MArkdown simple, nous utilisons les fonctions supplémentaires décrites ci-après.</p>
+          <h4>ajouter des classes CSS</h4>
+          <p>Avec des <a href="https://pythonhosted.org/Markdown/extensions/attr_list.html">Attribute list</a>: Pour permettre d'ajouter des classes CSS à une image ou à un bloc de texte, pour permettre une mise en page enrichie.
+Un exemple pour ajouter un attribut en ligne à un lien:<br><code>[link](http://example.com){: class="foo bar" .titre title="Some title!" }</code><br>
+qui produit le HTML suivant:<br><code>&lt;p&gt;&lt;a href="http://example.com" class="foo bar titre" title="Some title!"&gt;link&lt;/a&gt;&lt;/p&gt;</code></p>
+          <p>Notez que pour ajouter des classes on peut soit spécifier <code>.une_classe</code> ou `class='une_classe``</p>
+          <h4>Commentaires invisibles</h4>
+          <p>En utilisant simplement les commentaires HTML:</p>
+          <pre>
+            <code>    &lt;!-- On pourrait aussi mentionner les lol cats dans cette section non ? --&gt;
+</code>
+          </pre>
+          <p>Le commentaire suivant ne sera donc pas visible dans le rendu HTML final.
+<!-- Il faudrait vraiment enrichir cette documentation de quelques Gifs animés --></p>
+          <h3>Sous-section de cours avec animations vidéo</h3>
+          <p>Ces éléments de cours consistent en des sous-sections pouvant inclure 1 ou plusieurs vidéos d'animations. Ici il y a 2 étapes:<br>
+- a) avant la réalisation des vidéos, on ajoute des blocs 'Idée animation' pour décrire ce que pourrait contenir l'animation qui sera intégrée par la suite
+- b) une fois la vidéo réalisée, on intègre le lien de la vidéo qui sera ensuite intégrée via une iframe dans la sous-section de cours</p>
+          <h4>a) Notes pour idées d'animation</h4>
+          <p>On utilise ici le principe natif de block quote Markdown avec un <code>&gt;</code> en début de paragraphe:</p>
+          <pre>
+            <code>&gt; [Animation] Peut être des lettres simples en suite de 0 et de 1, et des
+compositions en mots/composition de suites de 0 et 1...  est-ce
+qu'on fait passer l'idée de coder/décoder et sa contraction en codec?  
+</code>
+          </pre>
+          <p>Qui produira ce résultat:</p>
+          <blockquote>
+            <p>[Animation] Peut être des lettres simples en suite de 0 et de 1, et des
+compositions en mots/composition de suites de 0 et 1...  est-ce
+qu'on fait passer l'idée de coder/décoder et sa contraction en codec?  </p>
+          </blockquote>
+          <p><strong>NB</strong> Si le mot clé <code>[Animation]</code> n'est pas inclu, le bloc sera toujours interprété comme bloc idée d'animation.</p>
+          <h4>b) Lien vers une vidéo d'animation</h4>
+          <p>Sur le même principe que les <em>attribute lists</em> (cf ci-dessus), on spécifie qu'il s'agit d'un lien vers une vidéo en spécifiant la classe <code>lien_video</code>:  </p>
+          <pre>
+            <code>    [Introduction au web](https://player.vimeo.com/video/138623497){: .lien_video } 
+
+ou  
+
+    [Introduction au web](https://player.vimeo.com/video/138623497){: class="lien_video" } 
+</code>
+          </pre>
+          <p>Ce lien doit être placé à l'intérieur d'une sous-section. Une sous-section peut bien sûr comporter plusieurs vidéos. </p>
+          <p>Ces liens vidéos font l'objet d'un traitement spécifique selon le type d'export:
+<em> export Site Vitrine HTML: on génère un code d'iframe qui permet de lire le/les vidéo/s sans quitter la page courante; le texte de la sous-section est quant à lui offert en parallèle en mode "zen" activé au click sur la vignette à côté des vidéos (cf image ci-dessous).
+<img alt="video_site_vitrine" src="module1/media/vue_web_cours.png"></em> pour l'export Moodle/IMSCC, le lien est simplement reformaté pour respecter le format <code>http://vimeo.com/video_id</code> qui permet au plugin Viméo de Moodle de transformer le lien vidéo en iframe automatiquement:
+<img alt="video_moodle" src="module1/media/3.vue_cours_avec_video.png"></p>
+        </div>
+      </div>
+    </div>
+    <div class="iframe_cont">
+      <iframe allowfullscreen="" mozallowfullscreen="" webkitallowfullscreen="" src="https://player.vimeo.com/video/93350435"></iframe>
+    </div>
+  </section>
+  <section style="display:none" id="subsec_0_1">
+    <p class="fil_ariane">Comment utiliser Esc@Pad pour produire un support de cours multi-plateformes | Comment ajouter des sous-sections `Activités`</p>
+    <div>
+      <p>Les activités peuvent être de 2 types:</p>
+      <ul>
+        <li>auto-évaluation: <code>activité</code></li>
+        <li>Exercices d'approfondissement: <code>activité-avancée</code>
+Pour le découpage des activités, nous n'utilisons plus les <code>##</code> de la syntaxe markdown, mais les "fenced code blocks" en spécifiant le type d'activité  juste à côté des "backticks" <code>```activité</code></li>
+      </ul>
+      <h3>Syntaxe GIFT</h3>
+      <p>Ces activités sont rédigées en GIFT; chaque question est séparée par une ligne vide. La syntaxe Gift a été proposé par l'équipde Moodle pour permettre de gagner du temps dans la rédaction de quizz et de tests. Cette syntaxe est disponible sur <a href="https://docs.moodle.org/28/en/GIFT_format">cette page</a>. Il s'agit d'un format "texte" qui peut s'éditer dans n'importe quel "éditeur de texte" (et non dans un "traitement de texte").</p>
+      <p>Exemple:</p>
+      <pre>
+        <code>    ```activité-avancée
+
+    ::La représentation numérique d'un livre peut inclure des données qui ne se limitent pas au texte. Donnez quelques exemples:: {
+    #### Le genre, la date de création, ...
+    }
+
+    ::Fonctionnalités d'un éditeur de textes::
+    [html]&lt;p&gt;Parmi les  fonctionnalités suivantes, lesquelles sont possibles ?
+    &lt;/p&gt;
+    {
+    ~%25%copier/couper/coller#tous les éditeurs le permettent
+    ~%25%rechercher et remplacer#très souvent disponible
+    ~%25%avancer de mots en mots#souvent par la conjonction CRTL-flèches
+    ~%25%corriger l'orthographe#certains le font
+    ~%-100%mettre en gras#l'éditeur ne permet pas d'enregistrer des mises en forme (il est possible toutefois d'écrire des commandes de mise en forme : un mot n'est pas en gras mais un texte dans un langage peut exprimer l'ordre de mettre en gras)
+    }
+    ```
+</code>
+      </pre>
+    </div>
+  </section>
+  <section style="display:none" id="subsec_0_2">
+    <p class="fil_ariane">Comment utiliser Esc@Pad pour produire un support de cours multi-plateformes | Exemples d'activité</p>
+    <p>Dans les sous-sections suivantes, retrouvez une série d'exemple d'activités des 2 types (simple et avancées.). N'hésitez-pas à vous inspirer de ces exemples et à les prendre comme point de départ pour créer vos propres contenus.</p>
+  </section>
+  <section style="display:none" id="subsec_0_3">
+    <p class="fil_ariane">Comment utiliser Esc@Pad pour produire un support de cours multi-plateformes | Auto-évaluation</p>
+    <div>
+      <div class="question">
+        <h3 class="questiontitle">Représenter et manipuler</h3>
+        <p class="questiontext"></p>
+        <p><strong>Représenter et manipuler</strong><br>
+Les traitements possibles dépendent fortement des choix de représentation</p>
+        <ul class="truefalse">
+          <li class=""><input type="radio" name="name">Vrai</li>
+          <li class=""><input type="radio" name="name">Faux</li>
+        </ul>
+      </div>
+      <!-- New question -->
+      <div class="question">
+        <h3 class="questiontitle">Quelles données ?</h3>
+        <p class="questiontext"></p>
+        <p><strong>Quelles données ?</strong><br>
+La représentation numérique d'un livre peut inclure des données qui ne se limitent pas au contenu textuel. Donnez quelques exemples.</p>
+      </div>
+      <!-- New question -->
+      <div class="question">
+        <h3 class="questiontitle">De la variété ?</h3>
+        <p class="questiontext"></p>
+        <p><strong>De la variété ?</strong><br>
+Il n'existe qu'une seule façon de représenter numériquement un livre.</p>
+        <ul class="truefalse">
+          <li class=""><input type="radio" name="name">Vrai</li>
+          <li class=""><input type="radio" name="name">Faux</li>
+        </ul>
+      </div>
+      <!-- New question -->
+      <div class="question">
+        <h3 class="questiontitle">Comment choisir ?</h3>
+        <p class="questiontext"></p>
+        <p><strong>Comment choisir ?</strong><br>
+Donnez des exemples de critères qui peuvent gouverner le choix d'une représentation numérique.</p>
+      </div>
+      <!-- New question -->
+      <div class="question">
+        <h3 class="questiontitle">Qui choisit ? </h3>
+        <p class="questiontext"></p>
+        <p><strong>Qui choisit ?</strong><br>
+Les choix de représentations sont faits par</p>
+        <ul class="multichoice">
+          <li class=""><input type="radio" name="name">Les informaticiens </li>
+          <li class=""><input type="radio" name="name">Les experts métier </li>
+          <li class=""><input type="radio" name="name">Les deux </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section style="display:none" id="subsec_0_4">
+    <p class="fil_ariane">Comment utiliser Esc@Pad pour produire un support de cours multi-plateformes | Activite</p>
+    <div class="question">
+      <h3 class="questiontitle">Une tâche complexe</h3>
+      <p class="questiontext"></p>
+      <p><strong>Une tâche complexe</strong><br>
+Représenter et normaliser est une tâche complexe : l'exemple de HTML. En vous rendant sur les pages wikipedia de <a href="https://fr.wikipedia.org/wiki/Hypertext_Markup_Language" target="_blank">HTML</a> et du <a href="https://fr.wikipedia.org/wiki/World_Wide_Web_Consortium" target="_blank">W3C</a>. Répondez aux questions suivantes :<br>
+- Quelle est l'origine de <code>HTML</code> ?<br>
+- Qui développe et publie les spécifications <code>HTML</code> depuis 1995 ?<br>
+- Quelle est la version la plus récente de <code>HTML</code> et son année de parution ?<br>
+- Qui participe au développement du standard <code>HTML</code> au <code>W3C</code> ?<br>
+- Quelles sont les étapes pour arriver à être une recommandation ?<br>
+- Qui est responsable du standard <code>css</code> pour les feuilles de style ?</p>
+    </div>
+  </section>
+  <section style="display:none" id="sec_A">
+    <p class="fil_ariane">Annexe A: Réutiliser ce module</p>
+    <p>Voici les liens vers les fichiers téléchargeables vous permettant de réutiliser ce module de cours:</p>
+    <ul>
+      <li>Archive IMS CC utilisable dans les LMS Moodle, Claroline, Blackboard, etc: <a href="module1/module1.imscc.zip">module1.imscc.zip</a></li>
+    </ul>
+  </section>
+</main>

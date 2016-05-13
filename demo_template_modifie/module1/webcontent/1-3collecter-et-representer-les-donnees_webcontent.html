@@ -1,0 +1,43 @@
+<h3>Exemples de jeux de données</h3>
+<p>Exploration des différents jeux de données disponibles: sites institutionnels, opendata, etc. </p>
+<ul>
+<li><a href="https://www.data.gouv.fr"><strong>Data.Gouv.Fr</strong></a>. Exemples:  </li>
+<li>Répartition géographique des contribuables de l'Impot sur les grandes Fortunes <a href="https://www.data.gouv.fr/fr/datasets/impot-de-solidarite-sur-la-fortune/">ISF en France</a>  </li>
+<li>
+<p>Résultats des élections: <a href="https://www.data.gouv.fr/fr/datasets/election-presidentielle-2012-resultats-572126/">Présidentielles 2012</a>, Départementales, etc.  </p>
+</li>
+<li>
+<p><a href="https://www.data.gouv.fr/fr/datasets/etude-sur-la-consommation-de-traitements-contre-la-dysfonction-erectile/">Etude sur la consommation de traitements contre la dysfonction érectile</a></p>
+</li>
+<li><a href="http://datafrance.info/?utm_source=datagouv&amp;utm_medium=datagouv&amp;utm_campaign=reuse-global">DataFrance</a>  </li>
+<li><a href="https://open-data.europa.eu"><strong>OPenData.EU</strong></a> </li>
+<li>
+<p><strong>Sncf</strong>: https://ressources.data.sncf.com/explore/<br />
+Exemples:<a href="https://ressources.data.sncf.com/explore/dataset/barometre-client/?tab=metas">Satisfaction Clients dans les gares</a>, <a href="https://ressources.data.sncf.com/explore/dataset/gares-pianos/">Pianos dans les gares</a>  </p>
+</li>
+<li>
+<p><strong>Nord - Pas de Calais</strong> : http://opendata.nordpasdecalais.fr/<br />
+donnnées "sociales" intéressantes par ex. <a href="http://opendata.nordpasdecalais.fr/dataset/indicateur-de-developpement-humain-communal-idh-4-en-2009/resource/e0efab89-5e40-4d59-8b78-280a3edcff47">Développement Humain communal (IDH-4) pour l'année 2009</a></p>
+</li>
+<li>
+<p><strong>Ville d'Issy les Moulinaux</strong> : https://data.issy.com  </p>
+</li>
+<li>
+<p><a href="http://www.insee.fr/fr/bases-de-donnees/"><strong>INSEE</strong></a>: stat globales, données démographiques, stats économiques, etc.</p>
+</li>
+<li>
+<p>Données "citoyennes" <a href="http://www.nosdonnees.fr/dataset">NosDonnées.fr</a></p>
+</li>
+</ul>
+<p>Différents formats sont utilisés dans le domaine de l'OpenData. NOus avons vu ensemble cette séance.</p>
+<h3>le .CSV (Comma Separated Value)</h3>
+<p>C'est un format texte, i.e ouvrable dans n'importe quel bon éditeur texte puisqu'il n'inclue pas de mise en forme à la différence des formats   traitement de text (ODT, DOC, etc). Un fichier CSV est essentiellement un tableau dans lequel:</p>
+<ul>
+<li>les valeurs pour les différentes colonnes sont séparés par un signe que l'on choisit la 1ère fois que l'on enregistre le fichier. Un conseil: éviter de choisir la <code>,</code> car en France c'est le signe qui sépare les décimales des nombres, donc il y a risque de se retrouver avec 2 colonnes différentes pour les entiers et le décimales d'un nombre à virgule, ex: 12,5 =&gt; 12 et 5 dans 2 colonnes séparées. Un signe couramment employé est le <code>;</code> ou la tabulation </li>
+<li>la 1ère ligne donne le nom des colonnes  </li>
+</ul>
+<h3>le .XLS:</h3>
+<p>Le format Excel pour un tableur est très diffusé. Attention il faut très souvent retraiter ce format et extraire les données des feuillets en autant de fichier .CSV pour une exploitation des données.</p>
+<h3>JSON</h3>
+<p>le .JSON: c'est le format d'échange de données sur le Web par excellence. C'est un format texte utilisable par des "machines" qui sertà stocker les données sous forme "d'objets" ayant différents "champs" décrivant les propriétés de chaque item. La grande différence avec les tableaux c'est qu'un champ peut être décrit avec plusieurs "sous-champs", ce qui se traduit plus difficilement avec un tableau.  </p>
+<p>Nous verrons par la suite d'autres formats courants, notamment ceux dédiés aux donnés géoréférencées.  </p>

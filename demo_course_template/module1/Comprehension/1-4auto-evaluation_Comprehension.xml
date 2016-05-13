@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questestinterop xmlns="http://www.imsglobal.org/xsd/ims_qtiasiv1p2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemalocation="http://www.imsglobal.org/xsd/ims_qtiasiv1p2 http://www.imsglobal.org/profile/cc/ccv1p1/ccv1p1_qtiasiv1p2p1_v1p0.xsd">
+  <assessment ident="1-4_auto-evaluation" title="Auto-évaluation">
+    <!--  Metadata  -->
+    <qtimetadata>
+      <qtimetadatafield>
+        <fieldlabel>cc_profile</fieldlabel>
+        <fieldentry>cc.exam.v0p1</fieldentry>
+      </qtimetadatafield>
+      <qtimetadatafield>
+        <fieldlabel>qmd_assessmenttype</fieldlabel>
+        <fieldentry>Examination</fieldentry>
+      </qtimetadatafield>
+      <qtimetadatafield>
+        <fieldlabel>qmd_scoretype</fieldlabel>
+        <fieldentry>Percentage</fieldentry>
+      </qtimetadatafield>
+      <qtimetadatafield>
+        <fieldlabel>qmd_feedbackpermitted</fieldlabel>
+        <fieldentry>Yes</fieldentry>
+      </qtimetadatafield>
+      <qtimetadatafield>
+        <fieldlabel>qmd_hintspermitted</fieldlabel>
+        <fieldentry>Yes</fieldentry>
+      </qtimetadatafield>
+      <qtimetadatafield>
+        <fieldlabel>qmd_solutionspermitted</fieldlabel>
+        <fieldentry>Yes</fieldentry>
+      </qtimetadatafield>
+      <qtimetadatafield>
+        <fieldlabel>cc_maxattempts</fieldlabel>
+        <fieldentry>1</fieldentry>
+      </qtimetadatafield>
+    </qtimetadata>
+    <rubric>
+      <material label="Summary">
+        <mattext texttype="text/html"></mattext>
+      </material>
+    </rubric>
+    <section ident="section_1_test_1-4_auto-evaluation">
+      <item ident="q_0" title="Représenter et manipuler">
+        <itemmetadata>
+          <qtimetadata>
+            <qtimetadatafield>
+              <fieldlabel>cc_profile</fieldlabel>
+              <fieldentry>cc.multiple_choice.v0p1</fieldentry>
+            </qtimetadatafield>
+            <qtimetadatafield>
+              <fieldlabel>cc_question_category</fieldlabel>
+              <fieldentry>Quiz Bank Auto-évaluation</fieldentry>
+            </qtimetadatafield>
+          </qtimetadata>
+        </itemmetadata>
+        <presentation>
+          <material>
+            <mattext texttype="text/html">
+&lt;p&gt;&lt;strong&gt;Représenter et manipuler&lt;/strong&gt;&lt;br&gt;
+Les traitements possibles dépendent fortement des choix de représentation&lt;/p&gt;</mattext>
+          </material>
+          <response_lid ident="response_1463069119" rcardinality="Single">
+            <render_choice shuffle="No">
+              <response_label ident="answer_1463069119_0">
+                <material>
+                  <mattext texttype="text/html">Vrai</mattext>
+                </material>
+              </response_label>
+              <response_label ident="answer_1463069119_1">
+                <material>
+                  <mattext texttype="text/html">Faux</mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar varname="SCORE" vartype="Decimal" maxvalue="100" minvalue="0" />
+          </outcomes>
+          <respcondition title="Correct">
+            <conditionvar>
+              <varequal respident="response_1463069119">answer_1463069119_0</varequal>
+            </conditionvar>
+            <setvar action="Set" varname="SCORE">100</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="feedb_0" />
+          </respcondition>
+          <respcondition title="">
+            <conditionvar>
+              <varequal respident="response_1463069119">answer_1463069119_1</varequal>
+            </conditionvar>
+            <setvar action="Set" varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="feedb_1" />
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="feedb_0">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/html"></mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+        <itemfeedback ident="feedb_1">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/html"></mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+      </item>
+      <item ident="q_1" title="Quelles données ?">
+        <itemmetadata>
+          <qtimetadata>
+            <qtimetadatafield>
+              <fieldlabel>cc_profile</fieldlabel>
+              <fieldentry>cc.essay.v0p1</fieldentry>
+            </qtimetadatafield>
+            <qtimetadatafield>
+              <fieldlabel>cc_question_category</fieldlabel>
+              <fieldentry>Quiz Bank Auto-évaluation</fieldentry>
+            </qtimetadatafield>
+          </qtimetadata>
+        </itemmetadata>
+        <presentation>
+          <material>
+            <mattext texttype="text/html">
+&lt;p&gt;&lt;strong&gt;Quelles données ?&lt;/strong&gt;&lt;br&gt;
+La représentation numérique d'un livre peut inclure des données qui ne se limitent pas au contenu textuel. Donnez quelques exemples.&lt;/p&gt;</mattext>
+          </material>
+          <response_str ident="response_1463069119" rcardinality="Single">
+            <render_fib prompt="Box" rows="5" fibtype="String" />
+          </response_str>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar varname="SCORE" vartype="Decimal" maxvalue="100" minvalue="0" />
+          </outcomes>
+          <respcondition continue="Yes" title="General feedback">
+            <conditionvar>
+              <other />
+            </conditionvar>
+            <displayfeedback feedbacktype="Response" linkrefid="general_fb" />
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="general_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/html"> &lt;p&gt;Le genre, la date de création, l'éditeur, ...&lt;/p&gt;</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+      </item>
+      <item ident="q_2" title="De la variété ?">
+        <itemmetadata>
+          <qtimetadata>
+            <qtimetadatafield>
+              <fieldlabel>cc_profile</fieldlabel>
+              <fieldentry>cc.multiple_choice.v0p1</fieldentry>
+            </qtimetadatafield>
+            <qtimetadatafield>
+              <fieldlabel>cc_question_category</fieldlabel>
+              <fieldentry>Quiz Bank Auto-évaluation</fieldentry>
+            </qtimetadatafield>
+          </qtimetadata>
+        </itemmetadata>
+        <presentation>
+          <material>
+            <mattext texttype="text/html">
+&lt;p&gt;&lt;strong&gt;De la variété ?&lt;/strong&gt;&lt;br&gt;
+Il n'existe qu'une seule façon de représenter numériquement un livre.&lt;/p&gt;</mattext>
+          </material>
+          <response_lid ident="response_1463069119" rcardinality="Single">
+            <render_choice shuffle="No">
+              <response_label ident="answer_1463069119_0">
+                <material>
+                  <mattext texttype="text/html">Vrai</mattext>
+                </material>
+              </response_label>
+              <response_label ident="answer_1463069119_1">
+                <material>
+                  <mattext texttype="text/html">Faux</mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar varname="SCORE" vartype="Decimal" maxvalue="100" minvalue="0" />
+          </outcomes>
+          <respcondition title="">
+            <conditionvar>
+              <varequal respident="response_1463069119">answer_1463069119_0</varequal>
+            </conditionvar>
+            <setvar action="Set" varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="feedb_0" />
+          </respcondition>
+          <respcondition title="Correct">
+            <conditionvar>
+              <varequal respident="response_1463069119">answer_1463069119_1</varequal>
+            </conditionvar>
+            <setvar action="Set" varname="SCORE">100</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="feedb_1" />
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="feedb_0">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/html">Représenter une information est le résultat de nombreux choix</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+        <itemfeedback ident="feedb_1">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/html"></mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+      </item>
+      <item ident="q_3" title="Comment choisir ?">
+        <itemmetadata>
+          <qtimetadata>
+            <qtimetadatafield>
+              <fieldlabel>cc_profile</fieldlabel>
+              <fieldentry>cc.essay.v0p1</fieldentry>
+            </qtimetadatafield>
+            <qtimetadatafield>
+              <fieldlabel>cc_question_category</fieldlabel>
+              <fieldentry>Quiz Bank Auto-évaluation</fieldentry>
+            </qtimetadatafield>
+          </qtimetadata>
+        </itemmetadata>
+        <presentation>
+          <material>
+            <mattext texttype="text/html">
+&lt;p&gt;&lt;strong&gt;Comment choisir ?&lt;/strong&gt;&lt;br&gt;
+Donnez des exemples de critères qui peuvent gouverner le choix d'une représentation numérique.&lt;/p&gt;</mattext>
+          </material>
+          <response_str ident="response_1463069119" rcardinality="Single">
+            <render_fib prompt="Box" rows="5" fibtype="String" />
+          </response_str>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar varname="SCORE" vartype="Decimal" maxvalue="100" minvalue="0" />
+          </outcomes>
+          <respcondition continue="Yes" title="General feedback">
+            <conditionvar>
+              <other />
+            </conditionvar>
+            <displayfeedback feedbacktype="Response" linkrefid="general_fb" />
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="general_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/html"> &lt;p&gt;la concision, la pertinence (permettre des traitements voulus), l'efficacité (les traitements sont réalisés rapidement, la confidentialité (l'accès aux données  peut être contrôlé),...&lt;/p&gt;</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+      </item>
+      <item ident="q_4" title="Qui choisit ? ">
+        <itemmetadata>
+          <qtimetadata>
+            <qtimetadatafield>
+              <fieldlabel>cc_profile</fieldlabel>
+              <fieldentry>cc.multiple_choice.v0p1</fieldentry>
+            </qtimetadatafield>
+            <qtimetadatafield>
+              <fieldlabel>cc_question_category</fieldlabel>
+              <fieldentry>Quiz Bank Auto-évaluation</fieldentry>
+            </qtimetadatafield>
+          </qtimetadata>
+        </itemmetadata>
+        <presentation>
+          <material>
+            <mattext texttype="text/html">
+&lt;p&gt;&lt;strong&gt;Qui choisit ?&lt;/strong&gt;&lt;br&gt;
+Les choix de représentations sont faits par&lt;/p&gt;</mattext>
+          </material>
+          <response_lid ident="response_1463069119" rcardinality="Single">
+            <render_choice shuffle="No">
+              <response_label ident="answer_1463069119_0">
+                <material>
+                  <mattext texttype="text/html">Les informaticiens </mattext>
+                </material>
+              </response_label>
+              <response_label ident="answer_1463069119_1">
+                <material>
+                  <mattext texttype="text/html">Les experts métier </mattext>
+                </material>
+              </response_label>
+              <response_label ident="answer_1463069119_2">
+                <material>
+                  <mattext texttype="text/html">Les deux </mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar varname="SCORE" vartype="Decimal" maxvalue="100" minvalue="0" />
+          </outcomes>
+          <respcondition title="">
+            <conditionvar>
+              <varequal respident="response_1463069119">answer_1463069119_0</varequal>
+            </conditionvar>
+            <setvar action="Set" varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="feedb_0" />
+          </respcondition>
+          <respcondition title="">
+            <conditionvar>
+              <varequal respident="response_1463069119">answer_1463069119_1</varequal>
+            </conditionvar>
+            <setvar action="Set" varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="feedb_1" />
+          </respcondition>
+          <respcondition title="Correct">
+            <conditionvar>
+              <varequal respident="response_1463069119">answer_1463069119_2</varequal>
+            </conditionvar>
+            <setvar action="Set" varname="SCORE">100</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="feedb_2" />
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="feedb_0">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/html">non pas seuls car intervient aussi l'utilisation métier des objets représentés</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+        <itemfeedback ident="feedb_1">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/html">non pas seuls car il faut des spécialistes des données numériques et des algorithmes</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+        <itemfeedback ident="feedb_2">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/html">oui et souvent aussi des chercheurs, des entreprises, ...</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+      </item>
+    </section>
+  </assessment>
+</questestinterop>

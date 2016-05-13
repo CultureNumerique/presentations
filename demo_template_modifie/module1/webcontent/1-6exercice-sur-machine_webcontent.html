@@ -1,0 +1,14 @@
+<p>Suivez les étapes ci-dessous et répondez aux questions ci-après.</p>
+<ul>
+<li>aller suur cartodb.com</li>
+<li>se creer un compte</li>
+<li>aller sur https://ressources.data.sncf.com</li>
+<li>récupérer le jeu de données "Baromètre satisfaction client en gare"</li>
+<li>ouvrir le fichier excel, récupérer (c/c) les valeurs des 2 colonnes : nom de la gare, valeur de satisfaction globale</li>
+<li>créer un fichier csv et y coller ces 2 col. </li>
+<li>récupérer le fichier "referentiel gare voyageurs" sur data.sncf.com</li>
+<li>normalement le fichier est géocodé par rapport à la colonne "commune", sinon, le faire manuellement en cliquant sur le bouton orange "geo" a côté de la colonne the_geom</li>
+<li>opérer la fusion des 2 datasets ainsi créés en choisissant pour chaque jeus de données la colonne donnant le nom des gares</li>
+<li>une fois la fusion effectuée, faite la requête SQL permettant de ne voir que les gares qui ont un chiffre de satisfaction:<br />
+<code>SELECT * FROM voyageurs_merge WHERE satisfaction_globale IS NOT NULL</code></li>
+</ul>
